@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router';
+import { Link } from 'react-router';
 import { TabConfig, TabId } from '../types';
 
 interface BottomNavigationBarProps {
@@ -9,12 +9,10 @@ interface BottomNavigationBarProps {
 }
 
 const BottomNavigationBar: React.FC<BottomNavigationBarProps> = ({ activeTab, onTabChange, tabs }) => {
-    const location = useLocation();
-
   return (
     <nav className="bg-gray-800 text-white p-4 flex justify-around shadow-md">
       {tabs.map((tab) => {
-        const isActive = location.pathname === tab.path;
+        const isActive = activeTab === tab.id;
         return (
             <Link to={tab.path} key={tab.id} className="flex flex-col items-center" onClick={() => onTabChange(tab.id)}>
                 {tab.icon(isActive)}
