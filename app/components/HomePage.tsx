@@ -10,7 +10,7 @@ const HomePage: React.FC<HomePageProps> = ({ onOpenModal }) => {
         {
           title: 'Welcome to Lab Testing Solutions',
           description: 'A nationwide provider of drug and alcohol testing services, making your experience seamless and stress-free.',
-          modalTitle: 'Your Partner in Testing',
+          modalTitle: 'Welcome to Lab Testing Solutions',
           modalContent: (
             <div>
               <p className="mb-4">
@@ -25,7 +25,7 @@ const HomePage: React.FC<HomePageProps> = ({ onOpenModal }) => {
         {
           title: 'Our Lab-Based Process',
           description: 'Our process is designed for accuracy and reliability, with specimens handled by accredited laboratories.',
-          modalTitle: 'How Our Testing Works',
+          modalTitle: 'Our Lab-Based Process',
           modalContent: (
             <div>
                 <p className="mb-4">
@@ -40,7 +40,7 @@ const HomePage: React.FC<HomePageProps> = ({ onOpenModal }) => {
         {
             title: 'Fast & Reliable Results',
             description: 'Most results are available within 24-48 hours, with clear processes for confirmation analysis.',
-            modalTitle: 'Receiving Your Results',
+            modalTitle: 'Fast & Reliable Results',
             modalContent: (
                 <div>
                     <p className="mb-4">
@@ -57,10 +57,14 @@ const HomePage: React.FC<HomePageProps> = ({ onOpenModal }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {flashcards.map((card, index) => (
-        <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-md cursor-pointer hover:bg-gray-700" onClick={() => onOpenModal(card)}>
+        <button 
+          key={index} 
+          className="bg-gray-800 p-4 rounded-lg shadow-md text-left hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          onClick={() => onOpenModal(card)}
+        >
           <h3 className="text-lg font-bold">{card.title}</h3>
-          <p>{card.description}</p>
-        </div>
+          <p className="mt-2">{card.description}</p>
+        </button>
       ))}
     </div>
   );
