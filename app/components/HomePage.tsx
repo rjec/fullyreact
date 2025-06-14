@@ -41,7 +41,7 @@ const HomePage: React.FC<HomePageProps> = ({ onOpenModal }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {flashcards.map((card, index) => (
-        <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-md cursor-pointer" onClick={() => onOpenModal(card)}>
+        <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-md cursor-pointer hover:bg-gray-700" onClick={() => onOpenModal(card)}>
           <h3 className="text-lg font-bold">{card.title}</h3>
           <p>{card.description}</p>
         </div>
