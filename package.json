@@ -16,13 +16,14 @@
     "publish": true
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@heroicons/react": "^2.2.0",
+    "@mui/material": "^5.15.20",
     "isbot": "5.1.26",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-router": "7.5.2",
-    "@mui/material": "^5.15.20",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5"
+    "react-router": "7.5.2"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.2.4",
